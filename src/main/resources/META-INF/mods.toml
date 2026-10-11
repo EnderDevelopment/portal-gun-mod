@@ -1,0 +1,23 @@
+[[mods]]
+modId="rickstuffsmod"
+version="${file.jarVersion}"
+displayName="Rick Stuffs Mod"
+credits="Created using Minecraft Forge"
+authors="AnonimoComVpn"
+description='''
+A Minecraft mod inspired by Rick Stuffs, adding portal guns with 3D models and a menu for coordinates, dimension, auto-destruction, and closing portals.
+'''
+
+[[dependencies.rickstuffsmod]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.rickstuffsmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

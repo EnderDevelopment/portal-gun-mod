@@ -1,0 +1,8 @@
+{
+    "item.rickstuffsmod.portal_gun": "Portal Gun",
+    "item.rickstuffsmod.portal_gun.description": "A gun that creates and manipulates portals.",
+    "menu.rickstuffsmod.coordinates": "Coordinates",
+    "menu.rickstuffsmod.dimension": "Dimension",
+    "menu.rickstuffsmod.auto_destruction": "Auto Destruction",
+    "menu.rickstuffsmod.close_portals": "Close Portals"
+}

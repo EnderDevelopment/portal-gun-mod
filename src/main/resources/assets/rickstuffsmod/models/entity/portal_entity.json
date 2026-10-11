@@ -1,0 +1,6 @@
+{
+    "parent": "entity/portal_entity",
+    "textures": {
+        "0": "rickstuffsmod:entity/portal_entity"
+    }
+}

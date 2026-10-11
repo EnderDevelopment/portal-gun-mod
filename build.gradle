@@ -1,0 +1,53 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'maven-publish'
+}
+
+group 'com.anonimocomvpn'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'forge'
+        url = 'https://files.minecraftforge.net/maven'
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+
+ext.archivesName = "rickstuffsmod-1.0.jar"
+
+forge {
+    version = '47.1.0'
+    runs {
+        client {
+            property 'forge.logging.markers', 'REGISTRIES'
+        }
+        server {
+            property 'forge.logging.markers', 'REGISTRIES'
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:47.1.0'
+    minecraft 'net.minecraft:client:1.20.1'
+    minecraft 'net.minecraft:server:1.20.1'
+    minecraft 'net.minecraft:game:1.20.1'
+
+    implementation fg.deobf('com.mojang:patchy:1.1.11')
+}
+
+processResources {
+    inputs.property 'version', project.version
+    inputs.property 'mcversion', '1.20.1'
+}
+
+jar {
+    from {
+        configurations.compileClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
